@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { Tag } from "lucide-react";
+import Image from "next/image";
 
 export default function AirdropsPage() {
   // Placeholder data based on the project plan
@@ -64,7 +64,7 @@ export default function AirdropsPage() {
             <Card key={index} className="flex flex-col">
               <CardHeader>
                 <div className="flex items-center gap-4">
-                  <img src={airdrop.logo} alt={`${airdrop.name} logo`} className="w-12 h-12 rounded-full dark:invert" />
+                  <Image src={airdrop.logo} alt={`${airdrop.name} logo`} width={48} height={48} className="rounded-full dark:invert" />
                   <div>
                     <CardTitle>{airdrop.name}</CardTitle>
                     <CardDescription>{airdrop.description}</CardDescription>
